@@ -62,6 +62,7 @@
             this.btn10x = new System.Windows.Forms.Button();
             this.btnLn = new System.Windows.Forms.Button();
             this.btnex = new System.Windows.Forms.Button();
+            this.btnAngle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -79,12 +80,15 @@
             // 
             // txtResults
             // 
+            this.txtResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.txtResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtResults.Font = new System.Drawing.Font("MS Reference Sans Serif", 23F);
+            this.txtResults.ForeColor = System.Drawing.Color.White;
             this.txtResults.Location = new System.Drawing.Point(10, 50);
             this.txtResults.Margin = new System.Windows.Forms.Padding(5);
             this.txtResults.Name = "txtResults";
             this.txtResults.ReadOnly = true;
-            this.txtResults.Size = new System.Drawing.Size(355, 45);
+            this.txtResults.Size = new System.Drawing.Size(355, 38);
             this.txtResults.TabIndex = 1;
             this.txtResults.Text = "0";
             this.txtResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -223,7 +227,7 @@
             // 
             // btnCE
             // 
-            this.btnCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
+            this.btnCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(98)))), ((int)(((byte)(0)))));
             this.btnCE.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
             this.btnCE.Location = new System.Drawing.Point(10, 140);
             this.btnCE.Margin = new System.Windows.Forms.Padding(5);
@@ -348,7 +352,7 @@
             // 
             // btnBksp
             // 
-            this.btnBksp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
+            this.btnBksp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(78)))), ((int)(((byte)(0)))));
             this.btnBksp.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
             this.btnBksp.Location = new System.Drawing.Point(130, 140);
             this.btnBksp.Margin = new System.Windows.Forms.Padding(5);
@@ -362,7 +366,7 @@
             // 
             // btnC
             // 
-            this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
+            this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(78)))), ((int)(((byte)(0)))));
             this.btnC.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
             this.btnC.Location = new System.Drawing.Point(70, 140);
             this.btnC.Margin = new System.Windows.Forms.Padding(5);
@@ -392,6 +396,7 @@
             // 
             this.lblHistory.BackColor = System.Drawing.Color.Transparent;
             this.lblHistory.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.lblHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.lblHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblHistory.Location = new System.Drawing.Point(10, 9);
             this.lblHistory.Name = "lblHistory";
@@ -527,12 +532,27 @@
             this.btnex.UseVisualStyleBackColor = false;
             this.btnex.Click += new System.EventHandler(this.u_operatorClick);
             // 
+            // btnAngle
+            // 
+            this.btnAngle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
+            this.btnAngle.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            this.btnAngle.Location = new System.Drawing.Point(70, 105);
+            this.btnAngle.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAngle.Name = "btnAngle";
+            this.btnAngle.Size = new System.Drawing.Size(50, 25);
+            this.btnAngle.TabIndex = 34;
+            this.btnAngle.Tag = "";
+            this.btnAngle.Text = "Rad";
+            this.btnAngle.UseVisualStyleBackColor = false;
+            this.btnAngle.Click += new System.EventHandler(this.btnAngle_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(374, 451);
+            this.Controls.Add(this.btnAngle);
             this.Controls.Add(this.btnex);
             this.Controls.Add(this.btnLn);
             this.Controls.Add(this.btn10x);
@@ -613,6 +633,7 @@
         private System.Windows.Forms.Button btn10x;
         private System.Windows.Forms.Button btnLn;
         private System.Windows.Forms.Button btnex;
+        private System.Windows.Forms.Button btnAngle;
     }
 }
 

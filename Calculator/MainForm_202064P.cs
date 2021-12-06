@@ -30,6 +30,7 @@ namespace Calculator
             if (flagOpPressed == true)
             {
                 entry = "";
+                flagOpPressed = false;
             }
 
             switch(num)
@@ -78,7 +79,7 @@ namespace Calculator
                     break;
             }
             opr = "";
-            lblHistory.Text = cache;
+            lblHistory.Text = cache + operand2 + " =";
         }
 
         bool flagOpPressed = false;
@@ -86,7 +87,7 @@ namespace Calculator
         {
             btnEqu.PerformClick();
 
-            string cache = lblHistory.Text;
+            string cache = txtResults.Text;
             string lblOpr = "";
             operand = Double.Parse(txtResults.Text);
 
@@ -125,7 +126,7 @@ namespace Calculator
             flagOpPressed = true;
             txtResults.Text = "0";
             if (cache == "0") { lblHistory.Text = ""; }
-            else { lblHistory.Text = cache; }
+            else { lblHistory.Text = "Ans = " + cache; }
             
         }
 
@@ -147,6 +148,8 @@ namespace Calculator
         {
             Button btn = (Button)sender;
             string u_opr = btn.Tag.ToString();
+            string cache = txtResults.Text;
+            string lblOpr = "";
 
             double value = Double.Parse(txtResults.Text);
 
@@ -156,10 +159,12 @@ namespace Calculator
                 case "Sqrt":
                     results = Math.Sqrt(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    lblOpr = "√";
                     break;
                 case "Sqr":
                     results = Math.Pow(value,2).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    lblOpr = "x²";
                     break;
                 case "Swap":
                     value = value - value*2;
@@ -168,36 +173,69 @@ namespace Calculator
                 case "1/x":
                     results = Math.Pow(value, -1).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    lblOpr = "1/x";
                     break;
                 case "ln":
                     results = Math.Log(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    lblOpr = "ln";
                     break;
                 case "ex":
                     results = Math.Exp(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    lblOpr = "ex";
                     break;
                 case "10x":
                     results = Math.Pow(10, value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    lblOpr = "10x";
                     break;
                 case "log10":
-                    results = Math.Log10(value).ToString("10");
+                    results = Math.Log10(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    lblOpr = "log";
                     break;
                 case "sin":
-                    results = Math.Sin(value).ToString("N10");
-                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    if (radMode == true)
+                    {
+                        results = Math.Sin(value).ToString("N10");
+                        txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    }
+                    else
+                    {
+                        results = (Math.Sin((value * Math.PI) / 180)).ToString("N10");
+                        txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    }
+                    lblOpr = "sin";
                     break;
                 case "cos":
-                    results = Math.Cos(value).ToString("N10");
-                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    if (radMode == true)
+                    {
+                        results = Math.Cos(value).ToString("N10");
+                        txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    }
+                    else
+                    {
+                        results = (Math.Cos((value * Math.PI) / 180)).ToString("N10");
+                        txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    }
+                    lblOpr = "cos";
                     break;
                 case "tan":
-                    results = Math.Sin(value).ToString("N10");
-                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    if (radMode == true)
+                    {
+                        results = Math.Tan(value).ToString("N10");
+                        txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    }
+                    else
+                    {
+                        results = (Math.Tan((value * Math.PI) / 180)).ToString("N10");
+                        txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    }
+                    lblOpr = "tan";
                     break;
             }
+            lblHistory.Text = lblOpr + "(" + cache + ")" + " =";
         }
 
         private void lblID_Click(object sender, EventArgs e)
@@ -234,22 +272,37 @@ namespace Calculator
 
         }
 
-        bool calMode = false;
+        bool advMode = false;
         private void btnMode_Click(object sender, EventArgs e)
         {
-            if (calMode == false) 
+            if (advMode == false) 
             { 
                 Size = new Size(390, 490);
                 txtResults.Size = new Size(355, 45);
                 lblHistory.Size = new Size(355, 30);
-                calMode = true;
+                advMode = true;
             }
             else
             {
                 Size = new Size(265, 490);
                 txtResults.Size = new Size(230, 45);
                 lblHistory.Size = new Size(230, 30);
-                calMode = false;
+                advMode = false;
+            }
+        }
+
+        bool radMode = true;
+        private void btnAngle_Click(object sender, EventArgs e)
+        {
+            if (radMode == true)
+            {
+                btnAngle.Text = "Deg";
+                radMode = false;
+            }
+            else
+            {
+                btnAngle.Text = "Rad";
+                radMode = true;
             }
         }
     }
