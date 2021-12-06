@@ -24,37 +24,37 @@ namespace Calculator
             Button btn = (Button)sender;
             string num = btn.Text;
             string cache = lblHistory.Text;
-            string temp = txtResults.Text;
+            string entry = txtResults.Text;
 
             if (flagOpPressed == true)
             {
-                temp = "";
+                entry = "";
                 flagOpPressed = false;
             }
 
             switch(num)
             {
                 case ".":
-                    if (!temp.Contains("."))
+                    if (!entry.Contains("."))
                 {
-                    temp += ".";
+                    entry += ".";
                 }
                 break;
             default:
-                    if (temp == "0")
-                        temp = "";
-                    temp += num;
+                    if (entry == "0")
+                        entry = "";
+                    entry += num;
                 break;
             }
-            txtResults.Text = temp;
+            txtResults.Text = entry;
 
             if (cache.Contains(""))
             {
-                lblHistory.Text = cache + temp;
+                lblHistory.Text = cache + entry;
             }
             else
             {
-                lblHistory.Text = cache + " " + temp;
+                lblHistory.Text = cache + " " + entry;
             }
         }
 
@@ -106,19 +106,19 @@ namespace Calculator
             {
                 case
                     "Add":
-                    lblOpr = " +";
+                    lblOpr = " + ";
                     break;
                 case
                     "Sub":
-                    lblOpr = " -";
+                    lblOpr = " - ";
                     break;
                 case
                     "Mpy":
-                    lblOpr = " ";
+                    lblOpr = " × ";
                     break;
                 case
                     "Div":
-                    lblOpr = " ";
+                    lblOpr = " ÷ ";
                     break;
                 default:
                     break;
@@ -128,10 +128,10 @@ namespace Calculator
 
         private void btnCE_Click(object sender, EventArgs e)
         {
-            string cache = lblHistory.Text;
+            string cache = txtResults.Text;
             opr = "";
             operand = 0;
-            flagOpPressed = false;
+            flagOpPressed = true;
             txtResults.Text = "0";
             lblHistory.Text = cache;
         }
