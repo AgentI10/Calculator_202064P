@@ -17,6 +17,7 @@ namespace Calculator
         public frmMain()
         {
             InitializeComponent();
+
         }
 
         private void numPad_Click(object sender, EventArgs e)
@@ -29,7 +30,6 @@ namespace Calculator
             if (flagOpPressed == true)
             {
                 entry = "";
-                flagOpPressed = false;
             }
 
             switch(num)
@@ -47,15 +47,6 @@ namespace Calculator
                 break;
             }
             txtResults.Text = entry;
-
-            if (cache.Contains(""))
-            {
-                lblHistory.Text = cache + entry;
-            }
-            else
-            {
-                lblHistory.Text = cache + " " + entry;
-            }
         }
 
         string opr = "";
@@ -133,7 +124,9 @@ namespace Calculator
             operand = 0;
             flagOpPressed = true;
             txtResults.Text = "0";
-            lblHistory.Text = cache;
+            if (cache == "0") { lblHistory.Text = ""; }
+            else { lblHistory.Text = cache; }
+            
         }
 
         private void btnC_Click(object sender, EventArgs e)
@@ -143,6 +136,11 @@ namespace Calculator
             flagOpPressed = false;
             txtResults.Text = "0";
             lblHistory.Text = "";
+        }
+
+        private void btnBksp_Click(object sender, EventArgs e)
+        {
+            txtResults.Text = txtResults.Text.Remove(txtResults.Text.Length - 1);
         }
 
         private void u_operatorClick(object sender, EventArgs e)
@@ -167,6 +165,38 @@ namespace Calculator
                     value = value - value*2;
                     txtResults.Text = value.ToString();
                     break;
+                case "1/x":
+                    results = Math.Pow(value, -1).ToString("N10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
+                case "ln":
+                    results = Math.Log(value).ToString("N10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
+                case "ex":
+                    results = Math.Exp(value).ToString("N10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
+                case "10x":
+                    results = Math.Pow(10, value).ToString("N10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
+                case "log10":
+                    results = Math.Log10(value).ToString("10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
+                case "sin":
+                    results = Math.Sin(value).ToString("N10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
+                case "cos":
+                    results = Math.Cos(value).ToString("N10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
+                case "tan":
+                    results = Math.Sin(value).ToString("N10");
+                    txtResults.Text = results.TrimEnd('0').TrimEnd('.');
+                    break;
             }
         }
 
@@ -182,10 +212,7 @@ namespace Calculator
 
         }
 
-        private void btnBksp_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnSwitch_Click(object sender, EventArgs e)
         {
@@ -207,5 +234,23 @@ namespace Calculator
 
         }
 
+        bool calMode = false;
+        private void btnMode_Click(object sender, EventArgs e)
+        {
+            if (calMode == false) 
+            { 
+                Size = new Size(390, 490);
+                txtResults.Size = new Size(355, 45);
+                lblHistory.Size = new Size(355, 30);
+                calMode = true;
+            }
+            else
+            {
+                Size = new Size(265, 490);
+                txtResults.Size = new Size(230, 45);
+                lblHistory.Size = new Size(230, 30);
+                calMode = false;
+            }
+        }
     }
 }
