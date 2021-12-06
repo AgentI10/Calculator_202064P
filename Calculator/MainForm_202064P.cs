@@ -17,7 +17,6 @@ namespace Calculator
         public frmMain()
         {
             InitializeComponent();
-
         }
 
         private void numPad_Click(object sender, EventArgs e)
@@ -303,6 +302,56 @@ namespace Calculator
             {
                 btnAngle.Text = "Rad";
                 radMode = true;
+            }
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            KeyPreview = true;
+        }
+
+        private void KeyDown(object sender, KeyEventArgs e)
+        {
+            string btnnum = e.KeyCode.ToString();
+
+            switch(btnnum)
+            {
+                case "D0":
+                    btn0.PerformClick();
+                    break;
+                case "D1":
+                    btn1.PerformClick();
+                    break;
+                case "D2":
+                    btn2.PerformClick();
+                    break;
+                case "D3":
+                    btn3.PerformClick();
+                    break;
+                case "D4":
+                    btn4.PerformClick();
+                    break;
+                case "D5":
+                    btn5.PerformClick();
+                    break;
+                case "D6":
+                    btn6.PerformClick();
+                    break;
+                case "D7":
+                    btn7.PerformClick();
+                    break;
+                case "D8":
+                    btn8.PerformClick();
+                    break;
+                case "D9":
+                    btn9.PerformClick();
+                    break;
+                case "OemPeriod":
+                    btnDot.PerformClick();
+                    break;
+                case "Equal":
+                    btnEqu.PerformClick();
+                    break;
             }
         }
     }

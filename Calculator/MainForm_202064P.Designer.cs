@@ -68,27 +68,28 @@
             // btn7
             // 
             this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn7.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn7.Location = new System.Drawing.Point(10, 200);
             this.btn7.Margin = new System.Windows.Forms.Padding(5);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(50, 50);
-            this.btn7.TabIndex = 0;
+            this.btn7.TabIndex = 7;
             this.btn7.Text = "7";
             this.btn7.UseVisualStyleBackColor = false;
             this.btn7.Click += new System.EventHandler(this.numPad_Click);
+            this.btn7.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // txtResults
             // 
             this.txtResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.txtResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtResults.Font = new System.Drawing.Font("MS Reference Sans Serif", 23F);
+            this.txtResults.Font = new System.Drawing.Font("Microsoft Sans Serif", 23F);
             this.txtResults.ForeColor = System.Drawing.Color.White;
             this.txtResults.Location = new System.Drawing.Point(10, 50);
             this.txtResults.Margin = new System.Windows.Forms.Padding(5);
             this.txtResults.Name = "txtResults";
             this.txtResults.ReadOnly = true;
-            this.txtResults.Size = new System.Drawing.Size(355, 38);
+            this.txtResults.Size = new System.Drawing.Size(355, 35);
             this.txtResults.TabIndex = 1;
             this.txtResults.Text = "0";
             this.txtResults.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -97,7 +98,7 @@
             // btn8
             // 
             this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn8.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn8.Location = new System.Drawing.Point(70, 200);
             this.btn8.Margin = new System.Windows.Forms.Padding(5);
             this.btn8.Name = "btn8";
@@ -106,11 +107,12 @@
             this.btn8.Text = "8";
             this.btn8.UseVisualStyleBackColor = false;
             this.btn8.Click += new System.EventHandler(this.numPad_Click);
+            this.btn8.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn9
             // 
             this.btn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn9.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn9.Location = new System.Drawing.Point(130, 200);
             this.btn9.Margin = new System.Windows.Forms.Padding(5);
             this.btn9.Name = "btn9";
@@ -119,11 +121,12 @@
             this.btn9.Text = "9";
             this.btn9.UseVisualStyleBackColor = false;
             this.btn9.Click += new System.EventHandler(this.numPad_Click);
+            this.btn9.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn4
             // 
             this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn4.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn4.Location = new System.Drawing.Point(10, 260);
             this.btn4.Margin = new System.Windows.Forms.Padding(5);
             this.btn4.Name = "btn4";
@@ -132,11 +135,12 @@
             this.btn4.Text = "4";
             this.btn4.UseVisualStyleBackColor = false;
             this.btn4.Click += new System.EventHandler(this.numPad_Click);
+            this.btn4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn5
             // 
             this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn5.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn5.Location = new System.Drawing.Point(70, 260);
             this.btn5.Margin = new System.Windows.Forms.Padding(5);
             this.btn5.Name = "btn5";
@@ -145,11 +149,12 @@
             this.btn5.Text = "5";
             this.btn5.UseVisualStyleBackColor = false;
             this.btn5.Click += new System.EventHandler(this.numPad_Click);
+            this.btn5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn6
             // 
             this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn6.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn6.Location = new System.Drawing.Point(130, 260);
             this.btn6.Margin = new System.Windows.Forms.Padding(5);
             this.btn6.Name = "btn6";
@@ -158,11 +163,12 @@
             this.btn6.Text = "6";
             this.btn6.UseVisualStyleBackColor = false;
             this.btn6.Click += new System.EventHandler(this.numPad_Click);
+            this.btn6.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn1
             // 
             this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn1.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn1.Location = new System.Drawing.Point(10, 320);
             this.btn1.Margin = new System.Windows.Forms.Padding(5);
             this.btn1.Name = "btn1";
@@ -171,11 +177,12 @@
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
             this.btn1.Click += new System.EventHandler(this.numPad_Click);
+            this.btn1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn2
             // 
             this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn2.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn2.Location = new System.Drawing.Point(70, 320);
             this.btn2.Margin = new System.Windows.Forms.Padding(5);
             this.btn2.Name = "btn2";
@@ -184,11 +191,12 @@
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
             this.btn2.Click += new System.EventHandler(this.numPad_Click);
+            this.btn2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn3
             // 
             this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn3.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn3.Location = new System.Drawing.Point(130, 320);
             this.btn3.Margin = new System.Windows.Forms.Padding(5);
             this.btn3.Name = "btn3";
@@ -197,25 +205,28 @@
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
             this.btn3.Click += new System.EventHandler(this.numPad_Click);
+            this.btn3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn0
             // 
             this.btn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn0.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn0.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn0.Location = new System.Drawing.Point(10, 380);
             this.btn0.Margin = new System.Windows.Forms.Padding(5);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(50, 50);
             this.btn0.TabIndex = 10;
+            this.btn0.Tag = "0";
             this.btn0.Text = "0";
             this.btn0.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn0.UseVisualStyleBackColor = false;
             this.btn0.Click += new System.EventHandler(this.numPad_Click);
+            this.btn0.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnDot
             // 
             this.btnDot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnDot.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnDot.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnDot.Location = new System.Drawing.Point(70, 380);
             this.btnDot.Margin = new System.Windows.Forms.Padding(5);
             this.btnDot.Name = "btnDot";
@@ -224,11 +235,12 @@
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = false;
             this.btnDot.Click += new System.EventHandler(this.numPad_Click);
+            this.btnDot.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnCE
             // 
             this.btnCE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(98)))), ((int)(((byte)(0)))));
-            this.btnCE.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnCE.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnCE.Location = new System.Drawing.Point(10, 140);
             this.btnCE.Margin = new System.Windows.Forms.Padding(5);
             this.btnCE.Name = "btnCE";
@@ -238,11 +250,12 @@
             this.btnCE.Text = "CE";
             this.btnCE.UseVisualStyleBackColor = false;
             this.btnCE.Click += new System.EventHandler(this.btnCE_Click);
+            this.btnCE.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(132)))), ((int)(((byte)(181)))));
-            this.btnAdd.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnAdd.Location = new System.Drawing.Point(190, 380);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(5);
             this.btnAdd.Name = "btnAdd";
@@ -252,11 +265,12 @@
             this.btnAdd.Text = "+";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.operator_Click);
+            this.btnAdd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnSqrt
             // 
             this.btnSqrt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnSqrt.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnSqrt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSqrt.Location = new System.Drawing.Point(315, 140);
             this.btnSqrt.Margin = new System.Windows.Forms.Padding(5);
             this.btnSqrt.Name = "btnSqrt";
@@ -266,25 +280,27 @@
             this.btnSqrt.Text = "√";
             this.btnSqrt.UseVisualStyleBackColor = false;
             this.btnSqrt.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnSqrt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnEqu
             // 
             this.btnEqu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(172)))), ((int)(((byte)(231)))));
-            this.btnEqu.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnEqu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnEqu.Location = new System.Drawing.Point(130, 380);
             this.btnEqu.Margin = new System.Windows.Forms.Padding(5);
             this.btnEqu.Name = "btnEqu";
             this.btnEqu.Size = new System.Drawing.Size(50, 50);
-            this.btnEqu.TabIndex = 15;
+            this.btnEqu.TabIndex = 0;
             this.btnEqu.Tag = "Equ";
             this.btnEqu.Text = "=";
             this.btnEqu.UseVisualStyleBackColor = false;
             this.btnEqu.Click += new System.EventHandler(this.btnEqu_Click);
+            this.btnEqu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnSub
             // 
             this.btnSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(132)))), ((int)(((byte)(181)))));
-            this.btnSub.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSub.Location = new System.Drawing.Point(190, 320);
             this.btnSub.Margin = new System.Windows.Forms.Padding(5);
             this.btnSub.Name = "btnSub";
@@ -294,11 +310,12 @@
             this.btnSub.Text = "-";
             this.btnSub.UseVisualStyleBackColor = false;
             this.btnSub.Click += new System.EventHandler(this.operator_Click);
+            this.btnSub.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnSqr
             // 
             this.btnSqr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnSqr.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnSqr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSqr.Location = new System.Drawing.Point(315, 200);
             this.btnSqr.Margin = new System.Windows.Forms.Padding(5);
             this.btnSqr.Name = "btnSqr";
@@ -308,16 +325,17 @@
             this.btnSqr.Text = "x²";
             this.btnSqr.UseVisualStyleBackColor = false;
             this.btnSqr.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnSqr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
             this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Font = new System.Drawing.Font("MS Reference Sans Serif", 7F);
+            this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.lblID.Location = new System.Drawing.Point(11, 435);
             this.lblID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(114, 13);
+            this.lblID.Size = new System.Drawing.Size(98, 13);
             this.lblID.TabIndex = 18;
             this.lblID.Text = "Ilhan, 202064P, E1";
             this.lblID.Click += new System.EventHandler(this.lblID_Click);
@@ -325,7 +343,7 @@
             // btnMpy
             // 
             this.btnMpy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(132)))), ((int)(((byte)(181)))));
-            this.btnMpy.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnMpy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnMpy.Location = new System.Drawing.Point(190, 260);
             this.btnMpy.Margin = new System.Windows.Forms.Padding(5);
             this.btnMpy.Name = "btnMpy";
@@ -335,11 +353,12 @@
             this.btnMpy.Text = "×";
             this.btnMpy.UseVisualStyleBackColor = false;
             this.btnMpy.Click += new System.EventHandler(this.operator_Click);
+            this.btnMpy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnDiv
             // 
             this.btnDiv.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(132)))), ((int)(((byte)(181)))));
-            this.btnDiv.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnDiv.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnDiv.Location = new System.Drawing.Point(190, 200);
             this.btnDiv.Margin = new System.Windows.Forms.Padding(5);
             this.btnDiv.Name = "btnDiv";
@@ -349,11 +368,12 @@
             this.btnDiv.Text = "÷";
             this.btnDiv.UseVisualStyleBackColor = false;
             this.btnDiv.Click += new System.EventHandler(this.operator_Click);
+            this.btnDiv.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnBksp
             // 
             this.btnBksp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(78)))), ((int)(((byte)(0)))));
-            this.btnBksp.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            this.btnBksp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnBksp.Location = new System.Drawing.Point(130, 140);
             this.btnBksp.Margin = new System.Windows.Forms.Padding(5);
             this.btnBksp.Name = "btnBksp";
@@ -363,11 +383,12 @@
             this.btnBksp.Text = "⌫";
             this.btnBksp.UseVisualStyleBackColor = false;
             this.btnBksp.Click += new System.EventHandler(this.btnBksp_Click);
+            this.btnBksp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnC
             // 
             this.btnC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(78)))), ((int)(((byte)(0)))));
-            this.btnC.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnC.Location = new System.Drawing.Point(70, 140);
             this.btnC.Margin = new System.Windows.Forms.Padding(5);
             this.btnC.Name = "btnC";
@@ -377,11 +398,12 @@
             this.btnC.Text = "C";
             this.btnC.UseVisualStyleBackColor = false;
             this.btnC.Click += new System.EventHandler(this.btnC_Click);
+            this.btnC.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnSwitch
             // 
             this.btnSwitch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(132)))), ((int)(((byte)(181)))));
-            this.btnSwitch.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnSwitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSwitch.Location = new System.Drawing.Point(190, 140);
             this.btnSwitch.Margin = new System.Windows.Forms.Padding(5);
             this.btnSwitch.Name = "btnSwitch";
@@ -391,11 +413,12 @@
             this.btnSwitch.Text = "+/-";
             this.btnSwitch.UseVisualStyleBackColor = false;
             this.btnSwitch.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnSwitch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // lblHistory
             // 
             this.lblHistory.BackColor = System.Drawing.Color.Transparent;
-            this.lblHistory.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.lblHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lblHistory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.lblHistory.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblHistory.Location = new System.Drawing.Point(10, 9);
@@ -409,7 +432,7 @@
             // btnMode
             // 
             this.btnMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
-            this.btnMode.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            this.btnMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnMode.Location = new System.Drawing.Point(10, 105);
             this.btnMode.Margin = new System.Windows.Forms.Padding(5);
             this.btnMode.Name = "btnMode";
@@ -423,7 +446,7 @@
             // btn1x
             // 
             this.btn1x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn1x.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn1x.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn1x.Location = new System.Drawing.Point(315, 260);
             this.btn1x.Margin = new System.Windows.Forms.Padding(5);
             this.btn1x.Name = "btn1x";
@@ -433,11 +456,12 @@
             this.btn1x.Text = "1/x";
             this.btn1x.UseVisualStyleBackColor = false;
             this.btn1x.Click += new System.EventHandler(this.u_operatorClick);
+            this.btn1x.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnSin
             // 
             this.btnSin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnSin.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnSin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnSin.Location = new System.Drawing.Point(255, 140);
             this.btnSin.Margin = new System.Windows.Forms.Padding(10, 5, 5, 5);
             this.btnSin.Name = "btnSin";
@@ -447,11 +471,12 @@
             this.btnSin.Text = "sin";
             this.btnSin.UseVisualStyleBackColor = false;
             this.btnSin.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnSin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnCos
             // 
             this.btnCos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnCos.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnCos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnCos.Location = new System.Drawing.Point(255, 200);
             this.btnCos.Margin = new System.Windows.Forms.Padding(5);
             this.btnCos.Name = "btnCos";
@@ -461,11 +486,12 @@
             this.btnCos.Text = "cos";
             this.btnCos.UseVisualStyleBackColor = false;
             this.btnCos.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnCos.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnTan
             // 
             this.btnTan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnTan.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnTan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnTan.Location = new System.Drawing.Point(255, 260);
             this.btnTan.Margin = new System.Windows.Forms.Padding(5);
             this.btnTan.Name = "btnTan";
@@ -475,39 +501,42 @@
             this.btnTan.Text = "tan";
             this.btnTan.UseVisualStyleBackColor = false;
             this.btnTan.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnTan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnLog10
             // 
             this.btnLog10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnLog10.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnLog10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnLog10.Location = new System.Drawing.Point(255, 380);
             this.btnLog10.Margin = new System.Windows.Forms.Padding(5);
             this.btnLog10.Name = "btnLog10";
             this.btnLog10.Size = new System.Drawing.Size(50, 50);
             this.btnLog10.TabIndex = 30;
             this.btnLog10.Tag = "log10";
-            this.btnLog10.Text = "log 10";
+            this.btnLog10.Text = "log";
             this.btnLog10.UseVisualStyleBackColor = false;
             this.btnLog10.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnLog10.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btn10x
             // 
             this.btn10x.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btn10x.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btn10x.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btn10x.Location = new System.Drawing.Point(315, 380);
             this.btn10x.Margin = new System.Windows.Forms.Padding(5);
             this.btn10x.Name = "btn10x";
             this.btn10x.Size = new System.Drawing.Size(50, 50);
             this.btn10x.TabIndex = 31;
             this.btn10x.Tag = "10x";
-            this.btn10x.Text = "10x";
+            this.btn10x.Text = "10ˣ";
             this.btn10x.UseVisualStyleBackColor = false;
             this.btn10x.Click += new System.EventHandler(this.u_operatorClick);
+            this.btn10x.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnLn
             // 
             this.btnLn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnLn.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnLn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnLn.Location = new System.Drawing.Point(255, 320);
             this.btnLn.Margin = new System.Windows.Forms.Padding(5);
             this.btnLn.Name = "btnLn";
@@ -517,25 +546,27 @@
             this.btnLn.Text = "ln";
             this.btnLn.UseVisualStyleBackColor = false;
             this.btnLn.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnLn.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnex
             // 
             this.btnex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(56)))), ((int)(((byte)(60)))));
-            this.btnex.Font = new System.Drawing.Font("MS Reference Sans Serif", 11F);
+            this.btnex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnex.Location = new System.Drawing.Point(315, 320);
             this.btnex.Margin = new System.Windows.Forms.Padding(5);
             this.btnex.Name = "btnex";
             this.btnex.Size = new System.Drawing.Size(50, 50);
             this.btnex.TabIndex = 33;
             this.btnex.Tag = "ex";
-            this.btnex.Text = "ex\r\n";
+            this.btnex.Text = "eˣ";
             this.btnex.UseVisualStyleBackColor = false;
             this.btnex.Click += new System.EventHandler(this.u_operatorClick);
+            this.btnex.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyDown);
             // 
             // btnAngle
             // 
             this.btnAngle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
-            this.btnAngle.Font = new System.Drawing.Font("MS Reference Sans Serif", 9F);
+            this.btnAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.btnAngle.Location = new System.Drawing.Point(70, 105);
             this.btnAngle.Margin = new System.Windows.Forms.Padding(5);
             this.btnAngle.Name = "btnAngle";
@@ -587,11 +618,12 @@
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.txtResults);
             this.Controls.Add(this.btn7);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmMain";
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
