@@ -433,7 +433,7 @@ namespace Calculator
         private void frmMain_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
-            calSuperDuperPortableMode();
+            calMode();
         }
 
         // INOP
