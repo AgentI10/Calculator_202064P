@@ -82,6 +82,12 @@ namespace Calculator
             string cache = lblHistory.Text;
             lblHistory.Text = cache + operand2 + " =";
 
+            if (clicks == true)
+            {
+                audioClicks();
+            }
+
+
             switch (opr)
             {
                 case
@@ -119,6 +125,12 @@ namespace Calculator
             string lblOpr = "";
             operand = Double.Parse(txtResults.Text);
 
+            if (clicks == true)
+            {
+                audioClicks();
+            }
+
+
             Button btn = (Button)sender;
             opr = btn.Tag.ToString();
                 flagOpPressed = true;
@@ -148,6 +160,11 @@ namespace Calculator
 
         private void btnCE_Click(object sender, EventArgs e)
         {
+            if (clicks == true)
+            {
+                audioClicks();
+            }
+
             string cache = txtResults.Text;
             opr = "";
             operand = 0;
@@ -160,6 +177,11 @@ namespace Calculator
 
         private void btnC_Click(object sender, EventArgs e)
         {
+            if (clicks == true)
+            {
+                audioClicks();
+            }
+
             opr = "";
             operand = 0;
             flagOpPressed = false;
@@ -169,6 +191,11 @@ namespace Calculator
 
         private void btnBksp_Click(object sender, EventArgs e)
         {
+            if (clicks == true)
+            {
+                audioClicks();
+            }
+
             if (txtResults.Text.Length == 0)
             {
                 
@@ -181,6 +208,11 @@ namespace Calculator
 
         private void u_operatorClick(object sender, EventArgs e)
         {
+            if (clicks == true)
+            {
+                audioClicks();
+            }
+
             Button btn = (Button)sender;
             string u_opr = btn.Tag.ToString();
             string cache = txtResults.Text;
@@ -378,12 +410,17 @@ namespace Calculator
             }
         }
 
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(txtResults.Text);
+        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
         }
 
+        // INOP
         private void KeyDown(object sender, KeyEventArgs e)
         {
             string btnnum = e.KeyCode.ToString();
@@ -443,7 +480,68 @@ namespace Calculator
                     break;
             }
         }
+        //INOP
 
+        private void KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string btnnum = e.KeyChar.ToString();
 
+            switch (btnnum)
+            {
+                case "0":
+                    btn0.PerformClick();
+                    break;
+                case "1":
+                    btn1.PerformClick();
+                    break;
+                case "2":
+                    btn2.PerformClick();
+                    break;
+                case "3":
+                    btn3.PerformClick();
+                    break;
+                case "4":
+                    btn4.PerformClick();
+                    break;
+                case "5":
+                    btn5.PerformClick();
+                    break;
+                case "6":
+                    btn6.PerformClick();
+                    break;
+                case "7":
+                    btn7.PerformClick();
+                    break;
+                case "8":
+                    btn8.PerformClick();
+                    break;
+                case "9":
+                    btn9.PerformClick();
+                    break;
+                case ".":
+                    btnDot.PerformClick();
+                    break;
+                case "=":
+                    btnEqu.PerformClick();
+                    break;
+                case "+":
+                    btnAdd.PerformClick();
+                    break;
+                case "-":
+                    btnSub.PerformClick();
+                    break;
+                case "*":
+                    btnMpy.PerformClick();
+                    break;
+                case "/":
+                    btnDiv.PerformClick();
+                    break;
+                case "Back":
+                    btnBksp.PerformClick();
+                    break;
+            }
+        }
+
+        
     }
 }
