@@ -63,6 +63,8 @@
             this.btnLn = new System.Windows.Forms.Button();
             this.btnex = new System.Windows.Forms.Button();
             this.btnAngle = new System.Windows.Forms.Button();
+            this.btnSpk = new System.Windows.Forms.Button();
+            this.btnTTS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -567,7 +569,7 @@
             // 
             this.btnAngle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
             this.btnAngle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btnAngle.Location = new System.Drawing.Point(70, 105);
+            this.btnAngle.Location = new System.Drawing.Point(255, 105);
             this.btnAngle.Margin = new System.Windows.Forms.Padding(5);
             this.btnAngle.Name = "btnAngle";
             this.btnAngle.Size = new System.Drawing.Size(50, 25);
@@ -577,12 +579,42 @@
             this.btnAngle.UseVisualStyleBackColor = false;
             this.btnAngle.Click += new System.EventHandler(this.btnAngle_Click);
             // 
+            // btnSpk
+            // 
+            this.btnSpk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
+            this.btnSpk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSpk.Location = new System.Drawing.Point(70, 105);
+            this.btnSpk.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSpk.Name = "btnSpk";
+            this.btnSpk.Size = new System.Drawing.Size(50, 25);
+            this.btnSpk.TabIndex = 35;
+            this.btnSpk.Tag = "";
+            this.btnSpk.Text = "Spk";
+            this.btnSpk.UseVisualStyleBackColor = false;
+            this.btnSpk.Click += new System.EventHandler(this.btnSpk_Click);
+            // 
+            // btnTTS
+            // 
+            this.btnTTS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
+            this.btnTTS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnTTS.Location = new System.Drawing.Point(130, 105);
+            this.btnTTS.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTTS.Name = "btnTTS";
+            this.btnTTS.Size = new System.Drawing.Size(50, 25);
+            this.btnTTS.TabIndex = 36;
+            this.btnTTS.Tag = "";
+            this.btnTTS.Text = "TTS";
+            this.btnTTS.UseVisualStyleBackColor = false;
+            this.btnTTS.Click += new System.EventHandler(this.btnTTS_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
             this.ClientSize = new System.Drawing.Size(374, 451);
+            this.Controls.Add(this.btnTTS);
+            this.Controls.Add(this.btnSpk);
             this.Controls.Add(this.btnAngle);
             this.Controls.Add(this.btnex);
             this.Controls.Add(this.btnLn);
@@ -666,6 +698,8 @@
         private System.Windows.Forms.Button btnLn;
         private System.Windows.Forms.Button btnex;
         private System.Windows.Forms.Button btnAngle;
+        private System.Windows.Forms.Button btnSpk;
+        private System.Windows.Forms.Button btnTTS;
     }
 }
 

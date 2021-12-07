@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Runtime.InteropServices;
+using System.Media;
+using System.Speech.Synthesis;
 
 namespace Calculator
 {
@@ -19,12 +21,34 @@ namespace Calculator
             InitializeComponent();
         }
 
+        bool clicks = false;
+        private void audioClicks()
+        {
+            SoundPlayer player = new SoundPlayer(Calculator.Properties.Resources.Clicks);
+            player.Play();
+        }
+
+        bool tts = false;
+        private void audioTTS(string result)
+        {
+            if (tts == true)
+            {
+                SpeechSynthesizer tts = new SpeechSynthesizer();
+                tts.Speak("The computational result is" + result);
+            }
+        }
+
         private void numPad_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             string num = btn.Text;
             string cache = lblHistory.Text;
             string entry = txtResults.Text;
+
+            if (clicks == true)
+            {
+                audioClicks();
+            }
 
             if (flagOpPressed == true)
             {
@@ -56,29 +80,34 @@ namespace Calculator
         {
             double operand2 = Double.Parse(txtResults.Text);
             string cache = lblHistory.Text;
+            lblHistory.Text = cache + operand2 + " =";
+
             switch (opr)
             {
                 case
                     "Add":operand = operand + operand2;
                     txtResults.Text = operand.ToString();
+                    audioTTS(txtResults.Text);
                     break;
                 case
                     "Sub":operand = operand - operand2;
                     txtResults.Text = operand.ToString();
+                    audioTTS(txtResults.Text);
                     break;
                 case
                     "Mpy":operand = operand * operand2;
                     txtResults.Text = operand.ToString();
+                    audioTTS(txtResults.Text);
                     break;
                 case
                     "Div":operand = operand / operand2;
                     txtResults.Text = operand.ToString();
+                    audioTTS(txtResults.Text);
                     break;
                 default:
                     break;
             }
             opr = "";
-            lblHistory.Text = cache + operand2 + " =";
         }
 
         bool flagOpPressed = false;
@@ -140,7 +169,14 @@ namespace Calculator
 
         private void btnBksp_Click(object sender, EventArgs e)
         {
-            txtResults.Text = txtResults.Text.Remove(txtResults.Text.Length - 1);
+            if (txtResults.Text.Length == 0)
+            {
+                
+            }
+            else
+            {
+                txtResults.Text = txtResults.Text.Remove(txtResults.Text.Length - 1);
+            }
         }
 
         private void u_operatorClick(object sender, EventArgs e)
@@ -148,7 +184,6 @@ namespace Calculator
             Button btn = (Button)sender;
             string u_opr = btn.Tag.ToString();
             string cache = txtResults.Text;
-            string lblOpr = "";
 
             double value = Double.Parse(txtResults.Text);
 
@@ -158,41 +193,49 @@ namespace Calculator
                 case "Sqrt":
                     results = Math.Sqrt(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
-                    lblOpr = "√";
+                    lblHistory.Text = "√(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "Sqr":
                     results = Math.Pow(value,2).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
-                    lblOpr = "x²";
+                    lblHistory.Text = "(" + cache + ")²" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "Swap":
                     value = value - value*2;
                     txtResults.Text = value.ToString();
+                    audioTTS(txtResults.Text);
                     break;
                 case "1/x":
                     results = Math.Pow(value, -1).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
-                    lblOpr = "1/x";
+                    lblHistory.Text = "1/(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "ln":
                     results = Math.Log(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
-                    lblOpr = "ln";
+                    lblHistory.Text = "ln(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "ex":
                     results = Math.Exp(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
-                    lblOpr = "ex";
+                    lblHistory.Text = "e^(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "10x":
                     results = Math.Pow(10, value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
-                    lblOpr = "10x";
+                    lblHistory.Text = "10^(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "log10":
                     results = Math.Log10(value).ToString("N10");
                     txtResults.Text = results.TrimEnd('0').TrimEnd('.');
-                    lblOpr = "log";
+                    lblHistory.Text = "log(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "sin":
                     if (radMode == true)
@@ -205,7 +248,8 @@ namespace Calculator
                         results = (Math.Sin((value * Math.PI) / 180)).ToString("N10");
                         txtResults.Text = results.TrimEnd('0').TrimEnd('.');
                     }
-                    lblOpr = "sin";
+                    lblHistory.Text = "sin(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
                 case "cos":
                     if (radMode == true)
@@ -218,7 +262,8 @@ namespace Calculator
                         results = (Math.Cos((value * Math.PI) / 180)).ToString("N10");
                         txtResults.Text = results.TrimEnd('0').TrimEnd('.');
                     }
-                    lblOpr = "cos";
+                    lblHistory.Text = "cos(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text); 
                     break;
                 case "tan":
                     if (radMode == true)
@@ -231,10 +276,10 @@ namespace Calculator
                         results = (Math.Tan((value * Math.PI) / 180)).ToString("N10");
                         txtResults.Text = results.TrimEnd('0').TrimEnd('.');
                     }
-                    lblOpr = "tan";
+                    lblHistory.Text = "tan(" + cache + ")" + " =";
+                    audioTTS(txtResults.Text);
                     break;
             }
-            lblHistory.Text = lblOpr + "(" + cache + ")" + " =";
         }
 
         private void lblID_Click(object sender, EventArgs e)
@@ -305,6 +350,35 @@ namespace Calculator
             }
         }
 
+        private void btnSpk_Click(object sender, EventArgs e)
+        {
+            if (clicks == true)
+            {
+                btnSpk.ForeColor = Color.White;
+                clicks = false;
+            }
+            else
+            {
+                btnSpk.ForeColor = Color.Orange;
+                clicks = true;
+            }
+        }
+
+        private void btnTTS_Click(object sender, EventArgs e)
+        {
+            if (tts == true)
+            {
+                btnTTS.ForeColor = Color.White;
+                tts = false;
+            }
+            else
+            {
+                btnTTS.ForeColor = Color.Orange;
+                tts = true;
+            }
+        }
+
+
         private void frmMain_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
@@ -349,10 +423,27 @@ namespace Calculator
                 case "OemPeriod":
                     btnDot.PerformClick();
                     break;
-                case "Equal":
+                case "Enter":
                     btnEqu.PerformClick();
+                    break;
+                case "Add":
+                    btnAdd.PerformClick();
+                    break;
+                case "Subtract":
+                    btnSub.PerformClick();
+                    break;
+                case "Multiply":
+                    btnMpy.PerformClick();
+                    break;
+                case "Divide":
+                    btnDiv.PerformClick();
+                    break;
+                case "Back":
+                    btnBksp.PerformClick();
                     break;
             }
         }
+
+
     }
 }
