@@ -374,8 +374,15 @@ namespace Calculator
             lblHistory.Size = new Size(230, 30);
             advMode = false;
         }
+        private void calSuperDuperPortableMode()
+        {
+            Size = new Size(265, 130);
+            txtResults.Size = new Size(230, 45);
+            lblHistory.Size = new Size(230, 30);
+            advMode = false;
+        }
 
-    bool radMode = true;
+        bool radMode = true;
         private void btnAngle_Click(object sender, EventArgs e)
         {
             if (radMode == true)
@@ -426,7 +433,7 @@ namespace Calculator
         private void frmMain_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
-            calMode();
+            calSuperDuperPortableMode();
         }
 
         // INOP
