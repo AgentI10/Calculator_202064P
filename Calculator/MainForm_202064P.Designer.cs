@@ -434,14 +434,14 @@
             // btnMode
             // 
             this.btnMode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
-            this.btnMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnMode.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnMode.Location = new System.Drawing.Point(10, 105);
             this.btnMode.Margin = new System.Windows.Forms.Padding(5);
             this.btnMode.Name = "btnMode";
             this.btnMode.Size = new System.Drawing.Size(50, 25);
             this.btnMode.TabIndex = 25;
             this.btnMode.Tag = "";
-            this.btnMode.Text = "Mode";
+            this.btnMode.Text = "MODE";
             this.btnMode.UseVisualStyleBackColor = false;
             this.btnMode.Click += new System.EventHandler(this.btnMode_Click);
             // 
@@ -575,21 +575,21 @@
             this.btnAngle.Size = new System.Drawing.Size(50, 25);
             this.btnAngle.TabIndex = 34;
             this.btnAngle.Tag = "";
-            this.btnAngle.Text = "Rad";
+            this.btnAngle.Text = "RAD";
             this.btnAngle.UseVisualStyleBackColor = false;
             this.btnAngle.Click += new System.EventHandler(this.btnAngle_Click);
             // 
             // btnSpk
             // 
             this.btnSpk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(76)))), ((int)(((byte)(80)))));
-            this.btnSpk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btnSpk.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.btnSpk.Location = new System.Drawing.Point(70, 105);
             this.btnSpk.Margin = new System.Windows.Forms.Padding(5);
             this.btnSpk.Name = "btnSpk";
             this.btnSpk.Size = new System.Drawing.Size(50, 25);
             this.btnSpk.TabIndex = 35;
             this.btnSpk.Tag = "";
-            this.btnSpk.Text = "Spk";
+            this.btnSpk.Text = "AUDIO";
             this.btnSpk.UseVisualStyleBackColor = false;
             this.btnSpk.Click += new System.EventHandler(this.btnSpk_Click);
             // 

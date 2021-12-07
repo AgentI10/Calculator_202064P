@@ -340,12 +340,12 @@ namespace Calculator
         {
             if (radMode == true)
             {
-                btnAngle.Text = "Deg";
+                btnAngle.Text = "DEG";
                 radMode = false;
             }
             else
             {
-                btnAngle.Text = "Rad";
+                btnAngle.Text = "RAD";
                 radMode = true;
             }
         }
