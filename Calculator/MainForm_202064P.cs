@@ -367,7 +367,15 @@ namespace Calculator
             }
         }
 
-        bool radMode = true;
+        private void calMode()
+        {
+            Size = new Size(265, 490);
+            txtResults.Size = new Size(230, 45);
+            lblHistory.Size = new Size(230, 30);
+            advMode = false;
+        }
+
+    bool radMode = true;
         private void btnAngle_Click(object sender, EventArgs e)
         {
             if (radMode == true)
@@ -418,6 +426,7 @@ namespace Calculator
         private void frmMain_Load(object sender, EventArgs e)
         {
             KeyPreview = true;
+            calMode();
         }
 
         // INOP
@@ -541,7 +550,5 @@ namespace Calculator
                     break;
             }
         }
-
-        
     }
 }
